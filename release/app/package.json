@@ -1,0 +1,18 @@
+{
+  "name": "impactmodding",
+  "version": "0.0.1",
+  "description": "A desktop app for Mod Managing for the Game Genshin Impact",
+  "license": "MIT",
+  "author": {
+    "name": "ZickZenni",
+    "email": "zickzenniyt@gmail.com",
+    "url": "https://github.com/zickzenni"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}
