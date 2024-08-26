@@ -72,11 +72,7 @@ export default class ImpactModdingApp {
       if (!this.window) {
         throw new Error('"window" is not defined');
       }
-      if (process.env.START_MINIMIZED) {
-        this.window.minimize();
-      } else {
-        this.window.show();
-      }
+      this.window.show();
     });
 
     this.window.on('closed', () => {
